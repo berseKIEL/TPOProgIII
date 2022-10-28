@@ -205,6 +205,9 @@ section {
     transition: 0.3s;
     margin-bottom: 0.6rem;
   }
+  .header {
+    border-top: thin solid var(--color-primario)
+  }
 }
 
 .nav-btns {
@@ -261,11 +264,13 @@ section {
 
 /* inicio Page! */
 .inicio {
-  padding-top: 0;
+  padding-top: 1rem;
 }
 
 .inicio-container {
-  gap: 1rem;
+  gap: 2.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .inicio-message-container {
@@ -282,7 +287,6 @@ section {
 
 .inicio-message-icon {
   width: 140px;
-  height: 50px;
   overflow: hidden;
   object-fit: cover;
 }
@@ -309,12 +313,8 @@ section {
 }
 
 .inicio-social-icon {
-  font-size: 1.3rem;
+  font-size: 2rem;
   color:var(--color-primario)
-}
-
-.inicio-social i:nth-child(1) {
-  font-size: 1.1rem;
 }
 
 .inicio-social-icon:hover {
@@ -367,3 +367,36 @@ section {
 .inicio-btns .btn:hover{
   color: var(--color-primario);
 }
+
+
+/* Seccion Perfil */
+.perfil-content {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.perfil-subtitulo {
+  margin-bottom: 0;
+}
+
+.perfil-text {
+  font-size:var(--fuente-size-h3);
+}
+
+.perfil-img {
+  width: 240px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 3.5rem 1px 3.5rem 1px;
+  border-width: 0.2rem;
+  border-style: solid;
+  border-color: var(--color-primario);
+  display: inline-block;
+  overflow: hidden;
+  margin: 1rem 0 1rem 0;
+}
+
+/* Habilidades */
+

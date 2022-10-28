@@ -32,31 +32,31 @@
         <div class="nav-menu" id="nav-menu">
           <ul class="nav-list grid">
             <li class="nav-item">
-              <a href="#inicio" class="nav-link">
+              <a href="#" class="nav-link">
                 <i class="fa-solid fa-house nav-icon"></i>
                 Inicio
               </a>
             </li>
             <li class="nav-item">
-              <a href="#perfil" class="nav-link">
+              <a href="#" class="nav-link">
                 <i class="fa-solid fa-address-card nav-icon"></i>
                 Perfil
               </a>
             </li>
             <li class="nav-item">
-              <a href="#habilidades" class="nav-link">
+              <a href="#" class="nav-link">
                 <i class="fa-solid fa-hand nav-icon"></i>
                 Habilidades
               </a>
             </li>
             <li class="nav-item">
-              <a href="#educacion" class="nav-link">
+              <a href="#" class="nav-link">
                 <i class="fa-solid fa-graduation-cap nav-icon"></i>
                 Educación
               </a>
             </li>
             <li class="nav-item">
-              <a href="#contacto" class="nav-link">
+              <a href="#" class="nav-link">
                 <i class="fa-solid fa-address-book"></i>
                 Contact
               </a>
@@ -119,35 +119,23 @@
         </div>
       </section>
 
-      <div class="seccion-hr"></div>
-
       <section class="seccion perfil" id="perfil">
         <div class="perfil-content container">
-          <h1 class="seccion-titulo perfil-titulo">Acerca de mí</h1>
-          <span class="seccion-subtitulo perfil-subtitulo">¿Quien Soy?</span>
-
-          <img src="static/img/hero.jpg" alt="" class="perfil-img" />
-          <p class="perfil-text">
-            Hola, mi nombre es Exequiel Barco. Soy de Santiago del Estero,
-            Argentina y actualmente estoy cursando al carrera "Tecnicatura
-            superior en Programación y Analisis de Datos" en el ITSE (Instituto
-            Tecnologico de Santiago del Estero) y realizando el curso
-            Full Stack Developer de Argentina Programa #SeProgramar
-          </p>
+            <h1 class="seccion-titulo perfil-titulo">Acerca de mí</h1>
+            <span class="seccion-subtitulo perfil-subtitul">¿Quien Soy?</span>
+            <div class="perfil-contenido">
+                <img src="static/img/hero.jpg" alt="" class="perfil-img">
+                <p class="perfil-text">
+                                
+                    
+                </p>
+            </div>
         </div>
       </section>
 
-      <div class="seccion-hr"></div>
+      <section class="seccion habilidad" id="habilidad"></section>
 
-      <section class="seccion habilidades" id="habilidades">
-        
-      </section>
-
-      <section class="seccion educacion" id="educacion">
-
-      </section>
-
-
+      <section class="seccion educacion"></section>
     </main>
 
     <!-- Footer -->
