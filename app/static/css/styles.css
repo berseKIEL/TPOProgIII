@@ -102,24 +102,28 @@ section {
 }
 
 /* Clases reutilizables */
-.seccion__hr {
+.seccion-hr {
   border: 1px solid;
   margin-left: 20px;
   margin-right: 20px;
 }
 
-.seccion__titulo {
+.seccion-titulo {
   font-size: var(--fuente-size-h1);
 }
 
-.seccion__subtitulo {
+.seccion-subtitulo {
   display: block;
   font-size: var(--fuente-size-pequenio);
   margin-bottom: var(--m-1-5);
 }
 
-.seccion__titulo,
-.seccion__subtitulo {
+.seccion-texto {
+  font-size: var(--fuente-size-normal);
+}
+
+.seccion-titulo,
+.seccion-subtitulo {
   text-align: center;
 }
 
@@ -196,9 +200,6 @@ section {
   font-size: 1.5rem;
 }
 
-.nav-icon {
-  font-family: var(--fuente-cuerpo);
-}
 
 /* Css para mostrar el menu */
 .mostrar-menu {
@@ -219,6 +220,9 @@ section {
   font-size: var(--fuente-size-normal);
   color: var(--color-titulo);
   font-weight: var(--fuente-peso-medio);
+}
+.nav-link:hover {
+  color: var(--color-primario);
 }
 
 .nav-item {

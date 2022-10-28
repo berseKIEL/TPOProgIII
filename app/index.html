@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Importación de CSS -->
-    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="static/css/styles.css">
 
     <title>Barco Exequiel - Porfolio</title>
 </head>
@@ -18,24 +18,88 @@
          Footer -> Derechos del Autor y copyright
      -->
      <!-- Navbar -->
-     <header class="header">
-        <nav class="nav">
+     <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav-logo">Barco Exequiel</a>
+            <div class="nav-btns">
+                <div class="cambiar-tema"> 
+                    <i class="fa-solid fa-toggle-on nav-icon" id="cambio-tema"></i>
+                </div>
+                <div class="nav-toggle">
+                    <i class="fa-solid fa-bars nav-icon" id="nav-toggle"></i>
+                </div>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list grid">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fa-solid fa-house nav-icon"></i>
+                            Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fa-solid fa-address-card nav-icon"></i>
+                            Perfil
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fa-solid fa-hand nav-icon"></i>
+                            Habilidades
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fa-solid fa-graduation-cap nav-icon"></i>
+                            Educación
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fa-solid fa-address-book"></i>
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+                <i class="fa-solid fa-xmark nav-close" id="nav-close"></i>
+            </div>
 
         </nav>
      </header>
      <!-- Main -->
      <main class="main">
+        <!-- Sección del Inicio -->
+        <section class="seccion inicio" id="inicio">
 
+        </section>
+        <section class="seccion perfil" id="perfil">
+
+        </section>
+        <section class="seccion habilidad" id="habilidad">
+
+        </section>
+
+        <section class="seccion educacion">
+
+        </section>
      </main>
 
      <!-- Footer -->
      <footer class="footer">
-
+        <div class="footer-bg">
+            <div class="footer-container">
+                <div class="footer-titulo seccion-titulo"></div>
+                <div class="footer-subtitulo seccion-subitulo"></div>
+                <img src="" alt="">
+                <span class="footer-texto seccion-texto"></span>
+            </div>
+        </div>
      </footer>
 
      <!-- Scripts -->
      <!-- Mi script -->
-     <script src="/static/js/main.js"></script>
+     <script src="static/js/main.js"></script>
 
      <!-- Font awesome -->
      <script src="https://kit.fontawesome.com/99b5397c27.js" crossorigin="anonymous"></script>
