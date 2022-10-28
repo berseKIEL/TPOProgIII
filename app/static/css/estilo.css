@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+
+/* Variables Root */
+:root {
+  /* Tamaño del Header */
+  --header-altura: 3rem;
+
+  /* Se basarán los colores del proyecto en sí con HSL, definiendo el color naranja como el principal */
+  --color-primario: hsl(36, 100%, 50%);
+  --color-primario-claro: hsl(36, 100%, 80%);
+  --color-secundario: hsl(36, 0%, 0%);
+  --color-titulo: hsl(36, 100%, 100%);
+  --color-texto: hsl(36, 10%, 90%);
+  --color-input: hsl(36, 70%, 96%);
+  --color-cuerpo: hsl(36, 1%, 15%);
+  --color-container: hsl(36, 100%, 50%);
+
+  /* Fuente del Cuerpo */
+  --fuente-cuerpo: "Roboto Condensed", sans-serif;
+
+  /* Tamaño de la Fuente */
+  --fuente-size-grande: 2rem;
+  --fuente-size-h1: 1.5rem;
+  --fuente-size-h2: 1.25rem;
+  --fuente-size-h3: 1.15rem;
+  --fuente-size-normal: 0.9rem;
+  --fuente-size-pequeño: 0.8rem;
+  --fuente-size-extrapequeño: 0.75rem;
+
+  /* Peso de la fuente  */
+  --fuente-peso-medio: 400;
+  --fuente-peso-bold: 700;
+
+  /* Margenes  */
+  --m-0-25: 0.25rem;
+  --m-0-5: 0.5rem;
+  --m-0-75: 0.75rem;
+  --m-1: 1rem;
+  --m-1-5: 1.5rem;
+  --m-2: 2rem;
+  --m-2-5: 2.5rem;
+  --m-3: 3rem;
+
+  /* Z-tool tamaño  */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/* Base */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* Margin de la pagina */
+  margin: 0 0 var(--header-altura) 0;
+
+  /* Fuente */
+  font-family: var(--fuente-cuerpo);
+
+  /* Tamaño de la fuente del documento entero */
+  font-size: var(--fuente-size-normal);
+
+  /* Color del body */
+  background-color: var(--color-cuerpo);
+
+  /* Color de la fuente */
+  color: var(--color-texto);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--color-titulo);
+  font-weight: var(--fuente-peso-bold);
+}
+
+/* Restablecimiento de estilos */
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-texto);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+section {
+  padding: 2rem 0 4rem;
+}
+
+/* Clases reutilizables */
+.seccion__hr {
+  border: 1px solid;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.seccion__titulo {
+  font-size: var(--fuente-size-h1);
+}
+
+.seccion__subtitulo {
+  display: block;
+  font-size: var(--fuente-size-pequenio);
+  margin-bottom: var(--m-1-5);
+}
+
+.seccion__titulo,
+.seccion__subtitulo {
+  text-align: center;
+}
+
+/* Layouts de la pagina */
+
+.container {
+  max-width: 768px;
+  margin-left: var(--m-1-5);
+  margin-right: var(--m-1-5);
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--color-cuerpo);
+}
+
+/* Nav bar */
+.nav {
+  max-width: 968px;
+  height: var(--header-altura);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo,
+.nav-toggle {
+  color: var(--color-titulo);
+  font-size: var(--fuente-size-h1);
+  font-weight: var(--fuente-peso-bold);
+}
+.nav-logo:hover {
+  color: var(--color-primario);
+}
+.nav-toggle {
+  cursor: pointer;
+}
+.nav-toggle:hover {
+  color: var(--color-primario);
+}
+
+/* Media query para el navbar */
+@media screen and (max-width: 767px) {
+  .nav-menu {
+    position: fixed;
+    bottom: -100%;
+    left: 1%;
+    width: 98%;
+    background-color: var(--color-cuerpo);
+    padding: 2rem 1.5rem 2rem 1.5rem;
+    box-shadow: 0 -1px 4px var(--color-primario);
+    border-radius: 1.5rem 1.5rem 0;
+    transition: 0.3s;
+    margin-bottom: 0.6rem;
+  }
+}
+
+.nav-btns {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.nav-btns .nav-icon:first-of-type {
+  font-size: 1.5rem;
+}
+
+.nav-icon {
+  font-family: var(--fuente-cuerpo);
+}
+
+/* Css para mostrar el menu */
+.mostrar-menu {
+  bottom: 0;
+}
+
+/* Lista del menu de botones */
+.nav-list {
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+  grid-auto-rows: 32px;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--fuente-size-normal);
+  color: var(--color-titulo);
+  font-weight: var(--fuente-peso-medio);
+}
+
+.nav-item {
+  grid-column: auto / span 3;
+}
+
+.nav-item:nth-child(1),
+.nav-item:nth-child(2),
+.nav-item:nth-child(3) {
+  grid-column: auto / span 2;
+}
+
+.nav-close {
+  position: absolute;
+  right: 1.45rem;
+  bottom: 1rem;
+  cursor: pointer;
+  color: red;
+}
+
+
+/* Home Page! */
+.home {
+  padding-top: 0;
+}
+
+.home-container {
+  gap: 1rem;
+}
+
+.home-message-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  background: var(--color-primario);
+  backdrop-filter: blur(10px);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.home-message-icon {
+  width: 140px;
+  height: 50px;
+  overflow:hidden;
+  object-fit: cover;
+}
+
+.home-message-span {
+  text-align: center;
+  font-size: var(--fuente-size-normal);
+}
