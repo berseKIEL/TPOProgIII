@@ -9,6 +9,7 @@
   --color-primario: hsl(36, 100%, 50%);
   --color-primario-claro: hsl(36, 100%, 80%);
   --color-secundario: hsl(36, 0%, 0%);
+  --color-barra: hsl(261, 53%, 56%);
   --color-titulo: hsl(36, 100%, 100%);
   --color-texto: hsl(36, 10%, 90%);
   --color-input: hsl(36, 70%, 96%);
@@ -137,7 +138,7 @@ section {
   font-weight: var(--fuente-peso-medio);
 }
 
-.btn--flex {
+.btn-flex {
   display: flex;
   width: fit-content;
   margin-left: 20px;
@@ -399,4 +400,179 @@ section {
 }
 
 /* Habilidades */
+.habilidades-tabs {
+  display: flex;
+  justify-content: center;
+  margin: 1.2rem 0 1.2rem 0;
+}
 
+.habilidades-btn {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--fuente-size-h2);
+  font-weight: var(--fuente-peso-bold);
+  cursor:pointer;
+  align-items: center;
+}
+.habilidades-btn i {
+  font-size: 3rem;
+}
+
+.habilidades-btn:hover {
+  color: var(--color-primario);
+}
+
+.habilidades-secciones {
+  margin: 1.5rem 0 2rem 0;
+}
+
+.habilidades-contenido {
+  border-radius: 10px;
+  background-color: var(--color-primario);
+}
+
+.habilidades-contenido:nth-child(2) {
+  height: fit-content;
+  padding: var(--m-1-5) 0 var(--m-1-5) 0;
+}
+
+.habilidades-contenedor-uno {
+  grid-auto-rows: 5rem;
+  grid-template-columns: repeat(auto-fit,minmax(7rem,1fr));
+  gap:0;
+  align-items: center;
+  justify-items: center;
+}
+
+.habilidades-habilidad-uno {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.habilidades-habilidad-uno:hover i {
+  color: var(--color-primario-claro);
+  cursor: default;
+}
+
+.habilidades-habilidad-uno:hover .habilidades-titulo {
+  color: var(--color-primario-claro);
+  cursor: default;
+}
+
+
+.habilidades-habilidad-uno i {
+  font-size: var(--fuente-size-h2);
+  text-shadow: 0 0 4px black;
+}
+
+.habilidades-titulo {
+  text-shadow: 0 0 4px black;
+}
+
+.habilidades-contenedor-dos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+
+.habilidades-habilidad-dos-header {
+  display:flex;
+  align-items: center;
+  cursor:pointer;
+  gap: 1rem;
+  margin-bottom: var(--m-0-25);
+}
+
+.habilidades-habilidad-dos-header i {
+  text-shadow: 0 0 4px black;
+  font-size: var(--fuente-size-h2);
+  margin-top: 0.25rem;
+}
+
+.habilidades-habilidad-dos-data {
+  margin-bottom: var(--m-0-25);
+}
+
+.habilidades-habilidad-dos-data i {
+  text-shadow: 0 0 4px black;
+  font-size: var(--fuente-size-h2);
+}
+
+.habilidades-flecha {
+  transition: .4s;
+}
+
+.habilidades-barra,
+.habilidades-porcentaje {
+  height: 5px;
+  border-radius: .25rem;
+}
+
+.habilidades-barra {
+  background-color: var(--color-secundario);
+}
+
+.habilidades-porcentaje {
+  display: block;
+  background-color: var(--color-barra);
+}
+
+.habilidad-html {
+  width: 55%;
+}
+
+.habilidad-css {
+  width: 45%;
+}
+
+.habilidad-js {
+  width: 40%;
+}
+
+
+.habilidad-python {
+  width: 40%;
+}
+
+.habilidad-java {
+  width: 35%;
+}
+
+.habilidad-js-be {
+  width: 35%;
+}
+
+.habilidades-cerradas .habilidades-habilidad-dos-lista {
+  height: 0;
+  overflow: hidden;
+}
+
+.habilidades-abiertas .habilidades-habilidad-dos-lista {
+  height: max-content;
+  margin-top: 1rem;
+}
+
+.habilidades-abiertas .habilidades-flecha {
+  transform: rotate(-180deg);
+}
+
+/* Data-content para que no muestre en caso de que no esta activo */
+.habilidades [data-content] {
+  display: none;
+}
+
+.habilidades-activo {
+  display:flex;
+}
+
+.habilidades-activo[data-content] {
+  display: block;
+}
+
+.habilidades-activo[data-target] {
+  color: var(--color-primario);
+}
