@@ -4,20 +4,20 @@ const navMenu = document.getElementById('nav-menu');
 const navClose = document.getElementById('nav-close')
 
 // Ocultar Menu
-if(navToggle && navCambio) {
+if (navToggle && navCambio) {
     navToggle.addEventListener('click', () => {
         navMenu.classList.add('mostrar-menu');
-        navToggle.style.display='none';
-        navCambio.style.display='none';
+        navToggle.style.display = 'none';
+        navCambio.style.display = 'none';
     })
 }
 
 // Mostrar menu en click close
-if(navClose) {
+if (navClose) {
     navClose.addEventListener('click', () => {
         navMenu.classList.remove('mostrar-menu');
-        navToggle.style.display='block';
-        navCambio.style.display='block';
+        navToggle.style.display = 'block';
+        navCambio.style.display = 'block';
     })
 }
 
@@ -26,8 +26,8 @@ const navLink = document.querySelectorAll('.nav-link')
 
 function clickLink() {
     navMenu.classList.remove('mostrar-menu')
-    navToggle.style.display='block';
-    navCambio.style.display='block';
+    navToggle.style.display = 'block';
+    navCambio.style.display = 'block';
 }
 
 navLink.forEach(n => n.addEventListener('click', clickLink))
@@ -69,7 +69,7 @@ function toggleHabilidad() {
         ContHabi[i].className = 'habilidades-contenido-dos habilidades-cerradas';
     }
 
-    if(itemClass == 'habilidades-contenido-dos habilidades-cerradas') {
+    if (itemClass == 'habilidades-contenido-dos habilidades-cerradas') {
         this.parentNode.className = 'habilidades-contenido-dos habilidades-abiertas';
     }
     else {
@@ -80,3 +80,5 @@ function toggleHabilidad() {
 Header.forEach((el) => {
     el.addEventListener('click', toggleHabilidad)
 })
+
+// Modo oscuro..

@@ -838,6 +838,15 @@ section {
     gap: 0;
   }
 
+  .inicio-message-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .inicio-message-span {
+    font-size: var(--fuente-size-h1);
+  }
+
   .inicio-content > div:nth-child(3) {
     grid-column: span 1;
   }
@@ -855,6 +864,7 @@ section {
     margin: auto;
     max-width: 768px;
   }
+
   .perfil-text {
     font-size: var(--fuente-size-h2);
     width: 75%;
@@ -928,8 +938,8 @@ section {
   }
 }
 
-@media screen and (min-width:987px) {
+@media screen and (min-width: 987px) {
   .container {
-    margin:auto;
+    margin: auto;
   }
 }
