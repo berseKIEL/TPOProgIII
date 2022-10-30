@@ -205,25 +205,6 @@ section {
   color: var(--color-primario);
 }
 
-/* Media query para el navbar */
-@media screen and (max-width: 767px) {
-  .nav-menu {
-    position: fixed;
-    bottom: -100%;
-    left: 1%;
-    width: 98%;
-    background-color: var(--color-cuerpo);
-    padding: 2rem 1.5rem 2rem 1.5rem;
-    box-shadow: 0 -1px 4px var(--color-primario);
-    border-radius: 1.5rem 1.5rem 0;
-    transition: 0.3s;
-    margin-bottom: 0.6rem;
-  }
-  .header {
-    border-top: thin solid var(--color-primario);
-  }
-}
-
 .nav-btns {
   display: flex;
   align-items: center;
@@ -234,10 +215,6 @@ section {
   font-size: 1.5rem;
 }
 
-/* Css para mostrar el menu */
-.mostrar-menu {
-  bottom: 0;
-}
 
 /* Lista del menu de botones */
 .nav-list {
@@ -254,6 +231,11 @@ section {
   color: var(--color-titulo);
   font-weight: var(--fuente-peso-medio);
 }
+
+.link-activo {
+  color: var(--color-primario);
+}
+
 .nav-link:hover {
   color: var(--color-primario);
 }
@@ -520,6 +502,12 @@ section {
   margin-top: 0.25rem;
 }
 
+.habilidades-habilidad-dos-header:hover i,
+.habilidades-habilidad-dos-header:hover .habilidades-titulo
+{
+  color:var(--color-primario-claro);
+}
+
 .habilidades-habilidad-dos-data {
   margin-bottom: var(--m-0-25);
 }
@@ -639,19 +627,56 @@ section {
 }
 
 .educacion-contenido {
+  border-radius: 10px;
+  background-color: var(--color-primario);
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  border-radius: 10px;
-  background-color: var(--color-primario);
-  padding: 1rem;
 }
+
+.educacion-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  padding: 10px;
+  background-color: var(--color-cuerpo);
+  border: 3px solid black;
+  border-radius: 10px;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.educacion-data {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border: 3px solid white;
+  background-color: var(--color-primario-claro);
+  border-radius: 5px; 
+}
+
+.educacion-texto {
+  color:var(--color-cuerpo);
+  font-size: var(--fuente-size-h2);
+}
+.educacion-cerrada {
+  display: none;
+}
+
+.educacion-abierta {
+  display: flex;
+}
+
 .educacion-icon {
   width: 200px;
   height: 75px;
   overflow: hidden;
   object-fit: cover;
+  border-radius: 15px;
 }
 
 .educacion-titulos {
@@ -771,6 +796,29 @@ section {
 }
 
 /* Media queries */
+/* Media query para el navbar */
+@media screen and (max-width: 767px) {
+  .nav-menu {
+    position: fixed;
+    bottom: -100%;
+    left: 1%;
+    width: 98%;
+    background-color: var(--color-cuerpo);
+    padding: 2rem 1.5rem 2rem 1.5rem;
+    box-shadow: 0 -1px 4px var(--color-primario);
+    border-radius: 1.5rem 1.5rem 0;
+    transition: 0.3s;
+    margin-bottom: 0.6rem;
+  }
+  .header {
+    border-top: thin solid var(--color-primario);
+  }
+  
+  .mostrar-menu {
+    bottom: 0;
+}
+}
+
 @media screen and (min-width: 768px) {
   .seccion {
     display: flex;
@@ -828,7 +876,6 @@ section {
   }
 
   .inicio-container {
-    width: 768px;
     gap: 0;
   }
   .inicio-content {
@@ -915,9 +962,14 @@ section {
   }
 
   .educacion-contenido {
-    width: 50%;
+    width: 100%;
     margin: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
   }
+
 
   .contenido-informacion-grid {
     display: grid;
@@ -936,6 +988,10 @@ section {
   .footer-container {
     margin: auto;
   }
+}
+
+@media screen and (min-width:560px) and (max-width:766px) {
+
 }
 
 @media screen and (min-width: 987px) {

@@ -58,6 +58,7 @@ tabs.forEach(tab => {
     })
 })
 
+
 // Click en Flecha para abrir image
 const ContHabi = document.getElementsByClassName('habilidades-contenido-dos');
 const Header = document.querySelectorAll('.habilidades-habilidad-dos-header')
@@ -81,4 +82,57 @@ Header.forEach((el) => {
     el.addEventListener('click', toggleHabilidad)
 })
 
-// Modo oscuro..
+// Educación
+const data = document.getElementsByClassName('educacion-data');
+const images = document.querySelectorAll('.educacion-images');
+
+images.forEach((ele) => {
+    ele.addEventListener('click', () => {
+        for (i=0; i < data.length; i++) {
+            data[i].className = 'educacion-data educacion-cerrada'
+        }
+
+        if (ele.querySelector('.educacion-data')) {
+            ele.querySelector('.educacion-data').className = 'educacion-data educacion-abierta'
+        }
+        
+        else {
+            ele.querySelector('.educacion-data') = 'educacion-data educacion-cerrada'
+        }
+    })
+})
+
+// Cambio de color navLink dependiendo de done estes
+const secciones = document.querySelectorAll('section[id]')
+
+function scrollActivo() {
+    const scrollY = window.pageYOffset;
+
+    secciones.forEach(current => {
+        const seccionAltura = current.offsetHeight;
+        const seccionTop = current.offsetTop - 50;
+        const sectionID = current.getAttribute('id')
+
+        if (scrollY > seccionTop && scrollY <= seccionTop + seccionAltura) {
+            document.querySelector('.nav-menu a[href*=' + sectionID + ']').classList.add('link-activo');
+        }
+        else {
+            document.querySelector('.nav-menu a[href*=' + sectionID + ']').classList.remove('link-activo');
+        }
+    })
+}
+
+window.addEventListener('scroll',scrollActivo)
+
+function scrollHeader() {
+    const nav = document.getElementById('header')
+    if(this.scrollY >= 80) {
+        nav.classList.add('scroll-header')
+    }
+
+    else {
+        nav.classList.remove('scroll-header')
+    }
+}
+
+window.addEventListener('scroll', scrollHeader);
