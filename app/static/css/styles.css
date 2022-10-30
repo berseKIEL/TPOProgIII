@@ -927,3 +927,9 @@ section {
     margin: auto;
   }
 }
+
+@media screen and (min-width:987px) {
+  .container {
+    margin:auto;
+  }
+}
