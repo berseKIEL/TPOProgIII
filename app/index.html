@@ -123,6 +123,7 @@
 
       <section class="seccion perfil" id="perfil">
         <div class="perfil-content container">
+          <i class="fa-solid fa-address-card nav-icon"></i>
           <h1 class="seccion-titulo perfil-titulo">Acerca de mí</h1>
           <span class="seccion-subtitulo perfil-subtitulo">¿Quien Soy?</span>
 
@@ -142,9 +143,12 @@
       <!-- Habilidades como Programador -->
       <section class="seccion habilidades" id="habilidades">
         <div class="habilidades-container container">
-          <h2 class="seccion-titulo habilidades-titulo">
-            Habilidades que poseo como Programador
-          </h2>
+          <div class="habilidades-titulo">
+            <i class="fa-solid fa-hand nav-icon"></i>
+            <h2 class="seccion-titulo habilidades-titulo">
+              Habilidades que poseo como Programador
+            </h2>
+          </div>
 
           <div class="habilidades-tabs">
             <div
@@ -154,10 +158,7 @@
               <i class="fa-solid fa-message"></i>
               <span class="seccion-titulo">Blandas</span>
             </div>
-            <div
-              class="habilidades-btn btn-flex"
-              data-target="#duras"
-            >
+            <div class="habilidades-btn btn-flex" data-target="#duras">
               <i class="fa-solid fa-laptop-code"></i>
               <span class="seccion-titulo"> Duras </span>
             </div>
@@ -197,11 +198,7 @@
               </div>
             </div>
 
-            <div
-              class="habilidades-contenido"
-              data-content
-              id="duras"
-            >
+            <div class="habilidades-contenido" data-content id="duras">
               <div class="habilidades-contenedor-dos grid">
                 <!-- Como Frontend -->
                 <div class="habilidades-contenido-dos habilidades-cerradas">
@@ -290,10 +287,79 @@
               </div>
             </div>
           </div>
+
+          <div class="habilidades-mensaje">
+            <i class="fa-solid fa-gears"></i>
+            ¡Estudiando por mi cuenta, aprendiendo academicamente y dispuesto a
+            profundizar muchisimo más!
+            <i class="fa-solid fa-gears"></i>
+          </div>
         </div>
       </section>
 
-      <section class="seccion educacion" id="educacion"></section>
+      <div class="seccion-hr"></div>
+
+      <section class="seccion educacion" id="educacion">
+        <div class="educacion-container container">
+          <div class="educacion-titulo">
+            <i class="fa-solid fa-graduation-cap nav-icon"></i>
+            <h2 class="seccion-titulo educacion-titulo">Educación</h2>
+          </div>
+
+          <span class="seccion-subtitulo educacion-subtitulo">
+            relacionado a la programación
+          </span>
+
+          <div class="educacion-contenido">
+            <img
+              src="https://www.itse.gob.ar/wp-content/uploads/2021/04/logohero-300x129.png"
+              alt="ITSE"
+              class="educacion-icon"
+            />
+
+            <img
+              src="static/img/argprogsp.png"
+              alt="seprogramar"
+              class="educacion-icon"
+            />
+
+            <img
+              src="static/img/argprogyp.png"
+              alt="yoprogramo"
+              class="educacion-icon"
+            />
+          </div>
+        </div>
+      </section>
+
+      <div class="seccion-hr"></div>
+
+      <section class="seccion contacto" id="contacto">
+        <div class="contacto-container container">
+          <div class="contacto-contenido">
+            <h2 class="contacto-titulo"></h2>
+            <i class="fa-solid fa-address-book"></i>
+            Contacto
+          </div>
+          <div class="contenido-informacion-grid grid">
+            <div class="contacto-informacion" id="discord">
+              <i class="fa-brands fa-discord"></i>
+              <h2 class="contacto-informacion-titulo">Discord</h2>
+              <span class="contacto-informacion-subtitulo">
+                BerseKIEL#3956
+              </span>
+            </div>
+            
+            <div class="contacto-hr"></div>
+
+            <div class="contacto-informacion" id="telegram">
+              <i class="fa-brands fa-telegram"></i>
+              <h2 class="contacto-informacion-titulo">Telegram</h2>
+              <span class="contacto-informacion-subtitulo"> @kielito </span>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
@@ -301,7 +367,7 @@
       <div class="footer-bg">
         <div class="footer-container">
           <div class="footer-titulo seccion-titulo"></div>
-          <div class="footer-subtitulo seccion-subitulo"></div>
+          <div class="footer-subtitulo seccion-subtitulo"></div>
           <img src="" alt="" />
           <span class="footer-texto seccion-texto"></span>
         </div>
