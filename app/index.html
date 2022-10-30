@@ -11,6 +11,9 @@
     <title>Barco Exequiel - Porfolio</title>
   </head>
   <body>
+    <div id="prueba">
+
+    </div>
     <!--
          Se configurá el porfolio de la siguiente forma
          Header -> Navbar
@@ -391,6 +394,20 @@
     <!-- Scripts -->
     <!-- Mi script -->
     <script src="static/js/main.js"></script>
+
+    <script>
+    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+    const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+    
+    const texto = document.createElement('span')
+    const text1 = document.createTextNode(vw);
+    const text2 = document.createTextNode(vh);
+    texto.appendChild(text1);
+    texto.appendChild(text2);
+
+    var element = document.getElementById('prueba');
+    element.appendChild(texto);
+    </script>
 
     <!-- Font awesome -->
     <script
