@@ -85,13 +85,10 @@ Header.forEach((el) => {
 // Educación
 const eduCont = document.getElementsByClassName('educacion-contenido');
 const images = document.querySelectorAll('.educacion-imagen');
+const header = document.querySelectorAll('.educacion-flecha')
 
 function toggleEducacion() {
     let itemClass = this.parentNode.className;
-
-    for (i = 0; i < eduCont.length; i++) {
-        eduCont[i].className = 'educacion-contenido educacion-cerradas';
-    }
 
     if (itemClass == 'educacion-contenido educacion-cerradas') {
         this.parentNode.className = 'educacion-contenido educacion-abiertas';
@@ -139,3 +136,20 @@ function scrollHeader() {
 }
 
 window.addEventListener('scroll', scrollHeader);
+
+
+//  Modo oscuro
+const botonTema = document.getElementById('cambio-tema');
+const modoOscuro = 'modo-claro';
+
+botonTema.addEventListener('click', () => {
+    document.body.classList.toggle(modoOscuro);
+    if (botonTema.classList.contains('fa-toggle-off')) {
+        botonTema.classList.remove('fa-toggle-off');
+        botonTema.classList.add('fa-toggle-on');
+    }
+    else if (botonTema.classList.contains('fa-toggle-on')) {
+        botonTema.classList.remove('fa-toggle-on');
+        botonTema.classList.add('fa-toggle-off');
+    }
+})
