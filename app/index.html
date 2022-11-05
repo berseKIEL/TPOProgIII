@@ -8,9 +8,10 @@
     <!-- Importación de CSS -->
     <link rel="stylesheet" href="static/css/styles.css" />
 
-    <!-- Fabicon -->
-    <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
+    <link rel="stylesheet" href="static/css/animation.css" />
 
+    <!-- Fabicon -->
+    <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico" />
 
     <title>Barco Exequiel - Porfolio</title>
   </head>
@@ -19,7 +20,7 @@
          Se configurá el porfolio de la siguiente forma
          Header -> Navbar
          Main -> Inicio - Perfil - Habilidades - Educación
-         Footer -> Derechos del Autor y copyright
+         Footer -> Derechos del Autor y copyright - Contacto - Redes Social
      -->
     <!-- Navbar -->
     <header class="header" id="header">
@@ -50,12 +51,6 @@
               <a href="#educacion" class="nav-link">
                 <i class="fa-solid fa-graduation-cap nav-icon"></i>
                 Educación
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#contacto" class="nav-link">
-                <i class="fa-solid fa-address-book"></i>
-                Contact
               </a>
             </li>
           </ul>
@@ -95,10 +90,18 @@
               <a href="#telegram">
                 <i class="fa-brands fa-telegram inicio-social-icon"></i>
               </a>
-              <a href="https://www.linkedin.com/in/exequielbarco/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.linkedin.com/in/exequielbarco/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i class="fa-brands fa-linkedin inicio-social-icon"></i>
               </a>
-              <a href="https://github.com/berseKIEL" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://github.com/berseKIEL"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i class="fa-brands fa-github inicio-social-icon"></i>
               </a>
             </div>
@@ -216,6 +219,8 @@
                     <h1 class="habilidades-titulo">Desarrollador FrontEnd</h1>
                     <i class="fa-solid fa-angle-down habilidades-flecha"></i>
                   </div>
+
+
                   <div class="habilidades-habilidad-dos-lista grid">
                     <div class="habilidades-habilidad-dos-data">
                       <i class="fa-brands fa-html5"></i>
@@ -324,8 +329,8 @@
             relacionado a la programación
           </span>
 
-          <div class="educacion-contenido">
-            <div class="educacion-images">
+          <div class="educacion-contenedor">
+            <div class="educacion-contenido educacion-cerradas">
               <div class="educacion-imagen">
                 <img
                   src="https://www.itse.gob.ar/wp-content/uploads/2021/04/logohero-300x129.png"
@@ -333,20 +338,16 @@
                   class="educacion-icon"
                 />
               </div>
-              <div class="educacion-data educacion-cerrada">
-                <span class="educacion-texto">
-                  Ingreso: 13-03-2022 
-                </span>
-                <span class="educacion-texto">
-                  -
-                </span>
-                <span class="educacion-texto">
-                  Finalización: Cursando
-                </span>
+              <div class="educacion-data">
+                <span class="educacion-texto">Titulo:</span>
+                <span class="educacion-texto"><strong>Tecnicatura Superior en Programación y Analisis de Sistemas</strong></span>
+                <span class="educacion-texto"> Estado: <strong> Pendiente </strong> </span>
+                
+                <a href="https://www.itse.gob.ar/" target="_blank" rel="noopener noreferrer" class="educacion-texto educacion-link">Página</a>  
               </div>
             </div>
 
-            <div class="educacion-images">
+            <div class="educacion-contenido educacion-cerradas">
               <div class="educacion-imagen">
                 <img
                   src="static/img/argprogsp.png"
@@ -354,20 +355,14 @@
                   class="educacion-icon"
                 />
               </div>
-              <div class="educacion-data educacion-cerrada">
-                <span class="educacion-texto">
-                  Ingreso: 01-02-2022  
-                </span>
-                <span class="educacion-texto">
-                  -
-                </span>
-                <span class="educacion-texto">
-                  Finalización 13-06-2022
-                </span>
+              <div class="educacion-data">
+                <span class="educacion-texto"><strong>Certificación</strong></span>
+                <span class="educacion-texto"> Argentina Programa</span>
+                <span class="educacion-texto"> <strong> "Sé Programar" </strong> </span>
               </div>
             </div>
 
-            <div class="educacion-images">
+            <div class="educacion-contenido educacion-cerradas">
               <div class="educacion-imagen">
                 <img
                   src="static/img/argprogyp.png"
@@ -375,46 +370,9 @@
                   class="educacion-icon"
                 />
               </div>
-              <div class="educacion-data educacion-cerrada">
-                <span class="educacion-texto">
-                  Ingreso: 28-06-2022 
-                </span>
-                <span class="educacion-texto">
-                  -
-                </span>
-                <span class="educacion-texto">
-                  Finalización: Cursando
-                </span>
+              <div class="educacion-data">
+                <span class="educacion-texto"> Estado: <strong> Pendiente </strong> </span>
               </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <div class="seccion-hr"></div>
-
-      <section class="seccion contacto" id="contacto">
-        <div class="contacto-container container">
-          <div class="contacto-contenido">
-            <i class="fa-solid fa-address-book"></i>
-            <h2 class="contacto-titulo">Contacto</h2>
-          </div>
-          <div class="contenido-informacion-grid grid">
-            <div class="contacto-informacion" id="discord">
-              <i class="fa-brands fa-discord"></i>
-              <h2 class="contacto-informacion-titulo">Discord</h2>
-              <span class="contacto-informacion-subtitulo">
-                BerseKIEL#3956
-              </span>
-            </div>
-
-            <div class="contacto-hr"></div>
-
-            <div class="contacto-informacion" id="telegram">
-              <i class="fa-brands fa-telegram"></i>
-              <h2 class="contacto-informacion-titulo">Telegram</h2>
-              <span class="contacto-informacion-subtitulo"> @kielito </span>
             </div>
           </div>
         </div>
@@ -431,14 +389,41 @@
               Desarrollador Web
             </div>
           </div>
+          <div class="contacto-container container">
+            <div class="contenido-informacion-grid grid">
+              <div class="contacto-informacion" id="discord">
+                <i class="fa-brands fa-discord"></i>
+                <h2 class="contacto-informacion-titulo">Discord</h2>
+                <span class="contacto-informacion-subtitulo">
+                  BerseKIEL#3956
+                </span>
+              </div>
+
+              <div class="contacto-hr"></div>
+
+              <div class="contacto-informacion" id="telegram">
+                <i class="fa-brands fa-telegram"></i>
+                <h2 class="contacto-informacion-titulo">Telegram</h2>
+                <span class="contacto-informacion-subtitulo"> @kielito </span>
+              </div>
+            </div>
+          </div>
           <div class="footer-social-media">
             <div class="footer-social">
-              <a href="https://www.facebook.com/FateofKiel/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.facebook.com/FateofKiel/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i class="fa-brands fa-facebook"></i>
               </a>
             </div>
             <div class="footer-social">
-              <a href="https://twitter.com/ExekielBaracus" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://twitter.com/ExekielBaracus"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i class="fa-brands fa-twitter"></i>
               </a>
             </div>

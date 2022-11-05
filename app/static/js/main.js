@@ -83,23 +83,26 @@ Header.forEach((el) => {
 })
 
 // Educación
-const data = document.getElementsByClassName('educacion-data');
-const images = document.querySelectorAll('.educacion-images');
+const eduCont = document.getElementsByClassName('educacion-contenido');
+const images = document.querySelectorAll('.educacion-imagen');
 
-images.forEach((ele) => {
-    ele.addEventListener('click', () => {
-        for (i=0; i < data.length; i++) {
-            data[i].className = 'educacion-data educacion-cerrada'
-        }
+function toggleEducacion() {
+    let itemClass = this.parentNode.className;
 
-        if (ele.querySelector('.educacion-data')) {
-            ele.querySelector('.educacion-data').className = 'educacion-data educacion-abierta'
-        }
-        
-        else {
-            ele.querySelector('.educacion-data') = 'educacion-data educacion-cerrada'
-        }
-    })
+    for (i = 0; i < eduCont.length; i++) {
+        eduCont[i].className = 'educacion-contenido educacion-cerradas';
+    }
+
+    if (itemClass == 'educacion-contenido educacion-cerradas') {
+        this.parentNode.className = 'educacion-contenido educacion-abiertas';
+    }
+    else {
+        this.parentNode.className = 'educacion-contenido educacion-cerradas';
+    }
+}
+
+images.forEach((el) => {
+    el.addEventListener('click', toggleEducacion)
 })
 
 // Cambio de color navLink dependiendo de done estes
