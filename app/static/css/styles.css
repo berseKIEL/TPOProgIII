@@ -769,6 +769,7 @@ section {
 
 .contacto-informacion .contacto-informacion-subtitulo {
   font-size: var(--fuente-size-h2);
+  color: var(--color-titulo);
 }
 
 .contacto-hr {
