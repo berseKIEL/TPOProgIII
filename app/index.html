@@ -53,6 +53,12 @@
                 Educación
               </a>
             </li>
+            <li class="nav-item">
+              <button href="" class="nav-link btn-reset" id="contactameBtn">
+                <i class="fa-solid fa-envelope"></i>
+                ¡Contactame!
+              </button>
+            </li>
           </ul>
           <i class="fa-solid fa-xmark nav-close" id="nav-close"></i>
         </div>
@@ -125,10 +131,10 @@
               <i class="fa-solid fa-download inicio-btns-icon"></i>
               Ver mi CV
             </a>
-            <a href="contactame.html" class="btn">
+            <button href="" class="btn-reset btn" id="contactameBtn">
               <i class="fa-solid fa-envelope inicio-btns-icon"></i>
               ¡Contactame!
-            </a>
+            </button>
           </div>
         </div>
       </section>
@@ -219,9 +225,10 @@
                   <div class="habilidades-habilidad-dos-header">
                     <i class="fa-solid fa-image habilidad-icon"></i>
                     <h1 class="habilidades-titulo">Desarrollador FrontEnd</h1>
-                    <i class="fa-solid fa-angle-down habilidades-flecha habilidad-icon"></i>
+                    <i
+                      class="fa-solid fa-angle-down habilidades-flecha habilidad-icon"
+                    ></i>
                   </div>
-
 
                   <div class="habilidades-habilidad-dos-lista grid">
                     <div class="habilidades-habilidad-dos-data">
@@ -262,14 +269,16 @@
                   <div class="habilidades-habilidad-dos-header">
                     <i class="fa-solid fa-code habilidad-icon"></i>
                     <h1 class="habilidades-titulo">Desarrollador BackEnd</h1>
-                    <i class="fa-solid fa-angle-down habilidades-flecha habilidad-icon"></i>
+                    <i
+                      class="fa-solid fa-angle-down habilidades-flecha habilidad-icon"
+                    ></i>
                   </div>
 
                   <div class="habilidades-habilidad-dos-lista grid">
                     <div class="habilidades-habilidad-dos-data">
                       <i class="fa-brands fa-python habilidad-icon"></i>
                       <h3 class="habilidades-titulo">Python</h3>
-                      <span class="habilidades-numero ">40%</span>
+                      <span class="habilidades-numero">40%</span>
                       <div class="habilidades-barra">
                         <span
                           class="habilidades-porcentaje habilidad-python"
@@ -343,12 +352,24 @@
               </div>
               <div class="educacion-data">
                 <span class="educacion-texto">Titulo:</span>
-                <span class="educacion-texto"><strong>Tecnicatura Superior en Programación y Analisis de Sistemas</strong></span>
-                <span class="educacion-texto"> Estado: <strong> Pendiente </strong> </span>
-                
-                <a href="https://www.itse.gob.ar/" target="_blank" rel="noopener noreferrer" class="educacion-texto educacion-link">Página</a>  
+                <span class="educacion-texto"
+                  ><strong
+                    >Tecnicatura Superior en Programación y Analisis de
+                    Sistemas</strong
+                  ></span
+                >
+                <span class="educacion-texto">
+                  Estado: <strong> Pendiente </strong>
+                </span>
+
+                <a
+                  href="https://www.itse.gob.ar/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="educacion-texto educacion-link"
+                  >Página</a
+                >
               </div>
-              
             </div>
 
             <div class="educacion-contenido educacion-cerradas">
@@ -360,11 +381,15 @@
                 />
                 <i class="fa-solid fa-angle-down educacion-flecha"></i>
               </div>
-              
+
               <div class="educacion-data">
-                <span class="educacion-texto"><strong>Certificación</strong></span>
+                <span class="educacion-texto"
+                  ><strong>Certificación</strong></span
+                >
                 <span class="educacion-texto"> Argentina Programa</span>
-                <span class="educacion-texto"> <strong> "Sé Programar" </strong> </span>
+                <span class="educacion-texto">
+                  <strong> "Sé Programar" </strong>
+                </span>
               </div>
             </div>
 
@@ -378,7 +403,9 @@
                 <i class="fa-solid fa-angle-down educacion-flecha"></i>
               </div>
               <div class="educacion-data">
-                <span class="educacion-texto"> Estado: <strong> Pendiente </strong> </span>
+                <span class="educacion-texto">
+                  Estado: <strong> Pendiente </strong>
+                </span>
               </div>
             </div>
           </div>
@@ -396,22 +423,22 @@
               Desarrollador Web
             </div>
           </div>
-          <div class="contacto-container container">
-            <div class="contenido-informacion-grid grid">
-              <div class="contacto-informacion" id="discord">
+          <div class="footer-container container">
+            <div class="footer-informacion-grid grid">
+              <div class="footer-informacion" id="discord">
                 <i class="fa-brands fa-discord nav-icon"></i>
-                <h2 class="contacto-informacion-titulo">Discord</h2>
-                <span class="contacto-informacion-subtitulo">
+                <h2 class="footer-informacion-titulo">Discord</h2>
+                <span class="footer-informacion-subtitulo">
                   BerseKIEL#3956
                 </span>
               </div>
 
-              <div class="contacto-hr"></div>
+              <div class="footer-hr"></div>
 
-              <div class="contacto-informacion" id="telegram">
+              <div class="footer-informacion" id="telegram">
                 <i class="fa-brands fa-telegram nav-icon"></i>
-                <h2 class="contacto-informacion-titulo">Telegram</h2>
-                <span class="contacto-informacion-subtitulo"> @kielito </span>
+                <h2 class="footer-informacion-titulo">Telegram</h2>
+                <span class="footer-informacion-subtitulo"> @kielito </span>
               </div>
             </div>
           </div>
@@ -441,6 +468,37 @@
         </div>
       </div>
     </footer>
+
+    <!-- ¡Contactame! -->
+    <div class="contactameModal" id="contactameModal">
+      <div class="contactame-contenido">
+        <h1 class="contactame-titulo">Envio de Correo</h1>
+        <form action="#" class="contactame-form">
+          <!-- Campos  -->
+          <div class="contactame-campos grid">
+            <!-- Primer Campo: Nombre -->
+            <div class="contactame-campo contactame-campo-nombre">
+              <input type="text" placeholder="Nombre" />
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <!-- Segundo Campo: Correo -->
+            <div class="contactame-campo contactame-campo-correo">
+              <input type="text" placeholder="Correo" />
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <!-- Tercer Campo: Mensaje -->
+            <div class="contactame-campo contactame-campo-mensaje">
+              <input type="text" placeholder="Mensaje" />
+              <i class="fa-solid fa-message"></i>
+            </div>            
+          </div>
+          <div class="contacto-grupo-btn">
+            <button type="submit" class="btn btn-flex">Enviar mensaje</button>
+            <span>Enviando mensaje...</span>
+          </div>
+        </form>
+      </div>
+    </div>
 
     <!-- Scripts -->
     <!-- Mi script -->

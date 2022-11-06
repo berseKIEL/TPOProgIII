@@ -154,6 +154,10 @@ section {
   text-align: center;
 }
 
+.btn-reset {
+  all: unset;
+}
+
 .btn {
   display: inline-block;
   background-color: var(--color-primario);
@@ -162,6 +166,8 @@ section {
   border-radius: 0.5rem;
   font-weight: var(--fuente-peso-medio);
 }
+
+
 
 .btn-flex {
   display: flex;
@@ -237,12 +243,12 @@ section {
 
 /* Lista del menu de botones */
 .nav-list {
-  grid-template-columns: repeat(6, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 32px;
 }
 
 .nav-link {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -257,10 +263,6 @@ section {
 
 .nav-link:hover {
   color: var(--color-primario);
-}
-
-.nav-item {
-  grid-column: auto / span 3;
 }
 
 .nav-close {
@@ -713,7 +715,7 @@ section {
   bottom: 2%;
   left: 50%;
   color: orange;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .educacion-titulos {
@@ -736,48 +738,86 @@ section {
   color: var(--color-texto);
 }
 
-/* Contacto */
-.contenido-informacion-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+/* Enviar correo */
+/* Contactame! */
+#contactameBtn {
+  cursor: pointer;
+}
+
+.contactameModal {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto; 
+  backdrop-filter: blur(5px);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.contactame-contenido {
+  background-color: var(--color-cuerpo);
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
   border-radius: 10px;
-  background-color: var(--color-primario);
-  padding: 1rem;
+  width: 80%; /* Could be more or less, depending on screen size */
 }
 
-.contacto-informacion {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.contacto-informacion {
-  text-shadow: 0 0 4px var(--color-cuerpo);
-}
-
-.contacto-informacion:hover span {
-  color: var(--color-primario);
-}
-
-.contacto-informacion i {
-  font-size: 2rem;
-}
-
-.contacto-informacion .contacto-informacion-titulo {
-  font-size: var(--fuente-size-h1);
-}
-
-.contacto-informacion .contacto-informacion-subtitulo {
-  font-size: var(--fuente-size-h2);
+.contactame-titulo {
+  font-size: var(--fuente-size-grande);
   color: var(--color-titulo);
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid white;
+  text-align: center;
 }
 
-.contacto-hr {
-  border: 1px solid;
-  margin-left: 20px;
-  margin-right: 20px;
+.contactame-form {
+  margin: 1rem;
 }
+
+.contactame-campos {
+  padding: 1.5rem 0.1rem;
+  display: grid;
+  grid-template-areas:
+    "contactame-campo-nombre contactame-campo-correo"
+    "contactame-campo-mensaje contactame-campo-mensaje";
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+}
+
+.contactame-campo-nombre {
+  grid-area: contactame-campo-nombre;
+}
+.contactame-campo-correo {
+  grid-area: contactame-campo-correo;
+}
+.contactame-campo-mensaje {
+  grid-area: contactame-campo-mensaje;
+  width: 100%;
+}
+
+.contactame-campo input {
+  border: 0;
+  border-radius: 5px;
+  color: var(--color-titulo);
+  height: 1.2rem;
+  text-align: center;
+}
+
+
+.contactame-campo {
+  display: inline-flex;
+  margin: auto;
+}
+
+.contactame-campo i {
+  position: relative;
+  left: -15px;
+  bottom: -0.5px;
+}
+
 
 /* Footer */
 .footer-bg {
@@ -826,6 +866,33 @@ section {
 .footer-texto {
   text-align: center;
   margin-bottom: 0.75rem;
+}
+
+.footer-informacion {
+  text-shadow: 0 0 4px var(--color-cuerpo);
+}
+
+.footer-informacion:hover span {
+  color: var(--color-primario);
+}
+
+.footer-informacion i {
+  font-size: 2rem;
+}
+
+.footer-informacion .contacto-informacion-titulo {
+  font-size: var(--fuente-size-h1);
+}
+
+.footer-informacion .contacto-informacion-subtitulo {
+  font-size: var(--fuente-size-h2);
+  color: var(--color-titulo);
+}
+
+.contacto-hr {
+  border: 1px solid;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 /* Media queries */
@@ -1004,7 +1071,7 @@ section {
     align-items: flex-start;
   }
 
-  .contenido-informacion-grid {
+  .footer-informacion-grid {
     display: grid;
     grid-template-columns: repeat(2, 0.5fr);
     border-radius: 10px;
@@ -1015,7 +1082,7 @@ section {
     gap: 0;
   }
 
-  .contacto-hr {
+  .footer-hr {
     display: none;
   }
 

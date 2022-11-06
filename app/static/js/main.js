@@ -102,6 +102,20 @@ images.forEach((el) => {
     el.addEventListener('click', toggleEducacion)
 })
 
+
+
+
+// Contactame Modal
+// Obtener el Modal "Contactame"
+var modalContactame = document.getElementById('contactameModal')
+
+// Obtener todos los botones que usan "contactame"
+var btnsContactame = document.querySelectorAll('#contactame')
+
+// 
+
+
+// Opcional
 // Cambio de color navLink dependiendo de done estes
 const secciones = document.querySelectorAll('section[id]')
 
