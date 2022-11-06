@@ -167,8 +167,6 @@ section {
   font-weight: var(--fuente-peso-medio);
 }
 
-
-
 .btn-flex {
   display: flex;
   width: fit-content;
@@ -745,79 +743,123 @@ section {
 }
 
 .contactameModal {
-  display: block;
+  display: none;
+  align-items: center;
+  justify-content: center;
   position: fixed;
-  z-index: 1;
+  z-index: 101;
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%; 
-  overflow: auto; 
+  height: 100%;
+  overflow: auto;
   backdrop-filter: blur(5px);
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.contactameModal[open] {
+  display: flex;
 }
 
 .contactame-contenido {
   background-color: var(--color-cuerpo);
-  margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border-radius: 10px;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 80%;
+}
+
+.contactame-header {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid white;
+  position: relative;
 }
 
 .contactame-titulo {
   font-size: var(--fuente-size-grande);
   color: var(--color-titulo);
-  padding: 0.5rem 1rem;
-  border-bottom: 1px solid white;
-  text-align: center;
 }
 
-.contactame-form {
-  margin: 1rem;
+.contactame-cerrar {
+  position: absolute;
+  right: 0.5rem;
+  cursor: pointer;
+  color: red;
 }
 
 .contactame-campos {
-  padding: 1.5rem 0.1rem;
+  width: 100%;
+  padding: 1.5rem 0.1rem 1.1rem;
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   grid-template-areas:
-    "contactame-campo-nombre contactame-campo-correo"
-    "contactame-campo-mensaje contactame-campo-mensaje";
-  grid-column-gap: 1rem;
-  grid-row-gap: 1rem;
+    "contactame-campo-nombre"
+    "contactame-campo-correo"
+    "contactame-campo-mensaje";
 }
 
 .contactame-campo-nombre {
   grid-area: contactame-campo-nombre;
 }
+
 .contactame-campo-correo {
   grid-area: contactame-campo-correo;
 }
+
 .contactame-campo-mensaje {
   grid-area: contactame-campo-mensaje;
-  width: 100%;
 }
-
-.contactame-campo input {
-  border: 0;
-  border-radius: 5px;
-  color: var(--color-titulo);
-  height: 1.2rem;
-  text-align: center;
-}
-
 
 .contactame-campo {
-  display: inline-flex;
-  margin: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.contactame-campo input,
+.contactame-campo textarea {
+  width: 100%;
+  border: 0;
+  border-radius: 5px;
+  color: var(--color-cuerpo);
+}
+
+.contactame-campo-nombre input,
+.contactame-campo-correo input {
+  text-align: center;
+  height: 1.1rem;
+}
+
+.contactame-campo input:invalid,
+.contactame-campo textarea:invalid {
+  box-shadow: 0 2px 2px red;
 }
 
 .contactame-campo i {
-  position: relative;
-  left: -15px;
-  bottom: -0.5px;
+  position: absolute;
+  left: 4px;
+  bottom: 1px;
+  color: var(--color-primario);
+  text-align: center;
 }
 
+.contacto-grupo-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contactame-submit {
+  cursor: pointer;
+}
+
+#contactame-submit:hover {
+  color: var(--color-primario);
+  background-color: var(--color-primario-claro);
+}
 
 /* Footer */
 .footer-bg {
@@ -1089,9 +1131,29 @@ section {
   .footer-container {
     margin: auto;
   }
+
+  .contactame-contenido {
+    width: 50%;
+    margin: 5% auto;
+  }
+
+  .contactame-campos {
+    grid-template-areas:
+      "contactame-campo-nombre contactame-campo-correo"
+      "contactame-campo-mensaje contactame-campo-mensaje";
+  }
+
+  .contactame-campo i {
+    font-size: var(--fuente-size-pequeño);
+  }
 }
 
-@media screen and (min-width: 560px) and (max-width: 766px) {
+@media screen and (min-width: 560px) {
+  .contactame-campos {
+    grid-template-areas:
+      "contactame-campo-nombre contactame-campo-correo"
+      "contactame-campo-mensaje contactame-campo-mensaje";
+  }
 }
 
 @media screen and (min-width: 987px) {

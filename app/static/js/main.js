@@ -106,13 +106,73 @@ images.forEach((el) => {
 
 
 // Contactame Modal
-// Obtener el Modal "Contactame"
-var modalContactame = document.getElementById('contactameModal')
+// Se crea una Variable Modal que permite cerrar o abrir según donde se haya clickeado
+var modal;
 
-// Obtener todos los botones que usan "contactame"
-var btnsContactame = document.querySelectorAll('#contactame')
+// Se selecciona el Form
+const formContactame = document.getElementById('contactame-form');
 
-// 
+// Se selecciona todos los botones que puedan abrir modal de contactame
+botonContactame = document.querySelectorAll('#contactameBtn');
+
+botonContactame.forEach((e) => {
+    e.addEventListener('click', () => {
+        modal = document.getElementById(e.dataset.id);
+        abrirModal(modal);
+    })
+})
+
+// Declaración de Funciones!
+// Función cerrarEsc
+const cerrarEsc = (e) => {
+    if(e.key === "Escape") {
+        cerrarModal(modal);
+    }
+}
+
+// Función abrirModal
+const abrirModal = (modal) => {
+    document.body.style.overflow = "hidden";
+    modal.setAttribute("open", "true");
+    document.addEventListener('keydown', cerrarEsc)
+}
+
+// Función cerrarModal
+const cerrarModal = (modal) => {
+    document.body.style.overflow = "auto";
+    modal.removeAttribute("open");
+}
+
+
+// Se selecciona el boton para cerrar el modal
+cerrarContactame = document.getElementById('contactame-cerrar');
+
+cerrarContactame.addEventListener('click', (e) => {
+    modal = document.getElementById(e.target.dataset.id);
+    formContactame.reset();
+    cerrarModal(modal);
+})
+
+
+// Submit del boton
+const submitContactame = document.getElementById('contactame-submit');
+
+// Evento de apretar boton
+submitContactame.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    console.log(formContactame);
+
+    for (i = 0; i < formContactame.length - 1; i++) {
+        console.log(formContactame.elements[i]);
+        if (formContactame.elements[i].value.length >= 6) {
+            formContactame.elements[i].setAttribute("style", "box-shadow: 0;");
+        }
+        else if (formContactame.elements[i].value.length < 6) {
+            formContactame.elements[i].setAttribute("style", "box-shadow: 0 2px 2px red;");
+        }
+    }
+})
 
 
 // Opcional
@@ -136,11 +196,11 @@ function scrollActivo() {
     })
 }
 
-window.addEventListener('scroll',scrollActivo)
+window.addEventListener('scroll', scrollActivo)
 
 function scrollHeader() {
     const nav = document.getElementById('header')
-    if(this.scrollY >= 80) {
+    if (this.scrollY >= 80) {
         nav.classList.add('scroll-header')
     }
 
