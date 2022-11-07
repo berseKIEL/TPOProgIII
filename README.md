@@ -25,22 +25,22 @@ _Fecha de Entrega estimada:_ **viernes 18 de noviembre 2022**
 ## Explicación básico de la Aplicación
 La página está compuesto por dos archivos HTML:
 - index.html -> Que representa el porfolio como programador web mio
-- contactame.html -> Que posee el formulario de contacto por correo electronico con validación
 
 El index.html será configurado de la siguiente forma:
- -> Header (Navbar)
+ -> Header (Navbar) 
  -> Main ->
             -> Inicio 
             -> Perfil 
             -> Habilidades 
             -> Educación
  -> Footer (Redes sociales y Contacto)
+ -> Contactame! (que es un Modal que se abré para poder mandar un correo electrónico)
 
 ## Cumplimiento de las actividades
 - La página no cumple con el formato de las cuatro páginas html, sin embargo como es un One page, representa diferentes archivos HTML.
 - En mi opinión utilizo etiquetas semanticas para poder estructurar el sitio ya que estructura
-- A realizar
-- A realizar - Se utliza íconos de FontAwesome y fuentes de Google Fonts (Roboto Condensed)
+- Se realizó un formulario validado de forma básica mediante Javascript
+- Se utliza íconos de FontAwesome y fuentes de Google Fonts (Roboto Condensed)
 - La página presenta algunos puntos de corte responsive, si bien hay 2 que son los mas representantes debido a que esta pensado para un container de un tamaño maximo de 768px
 - Se incorporá una animación apenas entras la pagina donde transición básica que implica un opacity del 0 al 1 y un rotate de -10°
 - La estructura HTML incorpora Flexbox y Grid para poder hacer que la página se vea de diferentes formas según el responsive

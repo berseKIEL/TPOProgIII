@@ -174,6 +174,15 @@ submitContactame.addEventListener('click', (e) => {
     }
 })
 
+// Cerrar video de youtube
+// Eligir cerrar video
+const cerrarVideo = document.getElementById('video-close')
+// Div del video
+const contenedorVideo = document.querySelector('.contenedor-video')
+
+cerrarVideo.addEventListener('click', () => {
+    contenedorVideo.classList.add('oculto');
+});
 
 // Opcional
 // Cambio de color navLink dependiendo de done estes

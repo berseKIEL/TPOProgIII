@@ -22,6 +22,19 @@
          Main -> Inicio - Perfil - Habilidades - Educación
          Footer -> Derechos del Autor y copyright - Contacto - Redes Social
      -->
+    <!-- Iframe de prueba -->
+    <div class="contenedor-video">
+      <iframe
+        class="iframe"
+        id="ytplayer"
+        type="text/html"
+        src="https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1&controls=0&iv_load_policy=3&enablejsapi=1"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+      <i class="fa-solid fa-xmark video-close" id="video-close"></i>
+    </div>
+
     <!-- Navbar -->
     <header class="header" id="header">
       <nav class="nav container">
@@ -54,7 +67,12 @@
               </a>
             </li>
             <li class="nav-item">
-              <button href="" class="nav-link btn-reset" id="contactameBtn" data-id="contactameModal">
+              <button
+                href=""
+                class="nav-link btn-reset"
+                id="contactameBtn"
+                data-id="contactameModal"
+              >
                 <i class="fa-solid fa-envelope"></i>
                 ¡Contactame!
               </button>
@@ -73,6 +91,7 @@
         </div>
       </nav>
     </header>
+
     <!-- Main -->
     <main class="main">
       <!-- Sección del Inicio -->
@@ -131,7 +150,12 @@
               <i class="fa-solid fa-download inicio-btns-icon"></i>
               Ver mi CV
             </a>
-            <button href="" class="btn-reset btn" id="contactameBtn" data-id="contactameModal">
+            <button
+              href=""
+              class="btn-reset btn"
+              id="contactameBtn"
+              data-id="contactameModal"
+            >
               <i class="fa-solid fa-envelope inicio-btns-icon"></i>
               ¡Contactame!
             </button>
@@ -468,13 +492,22 @@
         </div>
       </div>
     </footer>
-
     <!-- ¡Contactame! -->
-    <div class="contactameModal" id="contactameModal" role="contact" tabindex="-1">
+    <div
+      class="contactameModal"
+      id="contactameModal"
+      role="contact"
+      tabindex="-1"
+    >
       <div class="contactame-contenido">
         <div class="contactame-header">
           <h1 class="contactame-titulo">Envio de Correo</h1>
-          <i class="fa-solid fa-xmark contactame-cerrar" id="contactame-cerrar" data-id="contactameModal" aria-label="Close"></i>
+          <i
+            class="fa-solid fa-xmark contactame-cerrar"
+            id="contactame-cerrar"
+            data-id="contactameModal"
+            aria-label="Close"
+          ></i>
         </div>
         <form action="#" class="contactame-form" id="contactame-form">
           <!-- Campos  -->
@@ -482,20 +515,22 @@
             <!-- Primer Campo: Nombre -->
             <div class="contactame-campo contactame-campo-nombre">
               <i class="fa-solid fa-user"></i>
-              <input type="text" placeholder="Nombre" minlength="6"/>
+              <input type="text" placeholder="Nombre" minlength="6" />
             </div>
             <!-- Segundo Campo: Correo -->
             <div class="contactame-campo contactame-campo-correo">
               <i class="fa-solid fa-envelope"></i>
-              <input type="email" placeholder="Correo"/>
+              <input type="email" placeholder="Correo" />
             </div>
             <!-- Tercer Campo: Mensaje -->
             <div class="contactame-campo contactame-campo-mensaje">
-              <textarea placeholder= "Mensaje" rows="5"></textarea>
-            </div>            
+              <textarea placeholder="Mensaje" rows="5"></textarea>
+            </div>
           </div>
           <div class="contacto-grupo-btn">
-            <button type="submit" class="btn-reset btn" id="contactame-submit">Enviar mensaje</button>
+            <button type="submit" class="btn-reset btn" id="contactame-submit">
+              Enviar mensaje
+            </button>
           </div>
         </form>
       </div>

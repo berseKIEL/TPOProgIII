@@ -736,6 +736,32 @@ section {
   color: var(--color-texto);
 }
 
+/* Iframe */
+.contenedor-video {
+  position: fixed;
+  bottom: 50px;
+  right: 0;
+  z-index: 100;
+}
+
+.contenedor-video.oculto {
+  display: none;
+}
+
+.iframe {
+  width: 200px;
+  height: 120px;
+}
+
+.video-close {
+  position: absolute;
+  right: 1.45rem;
+  bottom: 1rem;
+  cursor: pointer;
+  color: red;
+}
+
+
 /* Enviar correo */
 /* Contactame! */
 #contactameBtn {
@@ -970,10 +996,6 @@ section {
     padding: 5rem 0;
   }
 
-  .seccion:nth-child(1) {
-    padding: 3.5rem 0;
-  }
-
   body {
     margin: 0;
   }
@@ -997,6 +1019,10 @@ section {
   .main,
   .footer-container {
     padding: 0 1rem;
+  }
+
+  .contenedor-video {
+    bottom: 0;
   }
 
   nav {
