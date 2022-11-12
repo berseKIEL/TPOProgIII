@@ -12,6 +12,7 @@
   --color-titulo: hsl(0, 0%, 100%);
   --color-texto: hsl(0, 0%, 100%);
   --color-texto-claro: hsl(0, 0%, 100%);
+  --color-texto-oscuro: hsl(0, 0%, 17%);;
   --color-cuerpo: hsl(0, 0%, 17%);
   --color-container-primario: hsl(36, 100%, 50%);
   --color-container-secundario: #fff;
@@ -55,6 +56,7 @@ body.modo-claro {
   --color-titulo: hsl(36, 1%, 15%);
   --color-texto: hsl(36, 5%, 50%);
   --color-texto-claro: hsl(0, 0%, 100%);
+  --color-texto-oscuro: hsl(0, 0%, 17%);;
   --color-cuerpo: hsl(0, 0%, 100%);
   --color-container-primario: hsl(36, 100%, 50%);
   --color-container-secundario: #fff;
@@ -888,6 +890,11 @@ section {
 }
 
 /* Footer */
+.footer-informacion > * {
+  color: var(--color-texto-claro);
+}
+
+
 .footer-bg {
   background-color: var(--color-primario);
 }
@@ -902,18 +909,21 @@ section {
 
 .footer-titulo,
 .footer-subtitulo {
-  text-shadow: 0 0 4px var(--color-cuerpo);
-}
-
-.footer-subtitulo {
-  margin: 0;
+  text-shadow: 0 0 4px var(--color-texto-oscuro);
 }
 
 .footer-titulo {
   font-weight: var(--fuente-peso-bold);
   font-size: var(--fuente-size-grande);
+  color: var(--color-texto-claro);
   margin-top: 1.5rem;
 }
+
+.footer-subtitulo {
+  margin: 0;
+  color: var(--color-texto-claro);
+}
+
 
 .footer-social-media {
   display: flex;
@@ -925,6 +935,7 @@ section {
 .footer-social i {
   font-size: 2rem;
   text-shadow: 0 0 4px var(--color-primario);
+  color: var(--color-texto-claro);
 }
 
 .footer-social:hover a i {
@@ -936,12 +947,12 @@ section {
   margin-bottom: 0.75rem;
 }
 
-.footer-informacion {
-  text-shadow: 0 0 4px var(--color-cuerpo);
+.footer-informacion span{
+  text-shadow: 0 0 4px var(--color-texto-oscuro);
 }
 
-.footer-informacion:hover span {
-  color: var(--color-primario);
+.footer-informacion span:hover {
+  color: var(--color-texto-oscuro);
 }
 
 .footer-informacion i {
