@@ -181,7 +181,7 @@ const cerrarVideo = document.getElementById('video-close')
 const contenedorVideo = document.querySelector('.contenedor-video')
 
 cerrarVideo.addEventListener('click', () => {
-    contenedorVideo.classList.add('oculto');
+    contenedorVideo.remove();
 });
 
 // Opcional
