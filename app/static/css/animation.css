@@ -2,6 +2,10 @@
     animation: transicionIn 1s;
 }
 
+.contactameModal {
+    animation: transicionIn 1s;
+}
+
 @keyframes transicionIn {
     from {
         opacity: 0;
