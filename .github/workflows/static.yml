@@ -44,7 +44,8 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
-          path: 'public'
+          path: '.'
+          #path: 'public'
       # Proporcionado por Github
       - name: Deploy to GitHub Pages
         id: deployment
