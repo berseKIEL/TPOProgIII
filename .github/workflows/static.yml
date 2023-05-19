@@ -35,17 +35,16 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v3
       # Mueve el contenido de la App 
-      #- name: Move App Folder
-       #run: |
-         # mkdir public
-          #cp -r /TPOProgIII/app/* public/
+      - name: Move App Folder
+        run: |
+          mkdir public
+          cp -r ./app/* public/
       # Proporcionado por Github
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
-          path: '.'
-          #path: 'public'
+          path: 'public'
       # Proporcionado por Github
       - name: Deploy to GitHub Pages
         id: deployment
