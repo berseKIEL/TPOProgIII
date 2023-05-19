@@ -38,7 +38,7 @@ jobs:
       - name: Move App Folder
         run: |
           mkdir public
-          cp -r App/ public/
+          cp -r TPOProgIII/app/* public/
       # Proporcionado por Github
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
